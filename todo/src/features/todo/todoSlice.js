@@ -15,5 +15,20 @@ export const tpdoSlice = createSlice({
             };
             state.todos.push(newTodo);
         },
+        deleteTodo: (state, action) => {
+            state.todos = state.todos.filter(todo => todo.id !== action.payload);
+        },
+        markAsDone: (state, action) => {
+            const todo = state.todos.find(todo => todo.id === action.payload);
+            if (todo) {
+                todo.isDone = true;
+            }
+        },
+        markAsNotDone: (state, action) => {
+            const todo = state.todos.find(todo => todo.id === action.payload);
+            if (todo) {
+                todo.isDone = false;
+            }
+        },
     }
 })
