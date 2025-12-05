@@ -8,6 +8,8 @@ export const tpdoSlice = createSlice({
     name: "todo",
     initialState,
     reducers:{
-        
+        addTodo: (state, action) => {
+            state.todos.push(action.payload);
+        },
     }
 })
