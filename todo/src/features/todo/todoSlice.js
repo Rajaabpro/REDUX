@@ -32,3 +32,5 @@ export const tpdoSlice = createSlice({
         },
     }
 })
+export const { addTodo, deleteTodo, markAsDone, markAsNotDone } = tpdoSlice.actions;
+export default tpdoSlice.reducer;
