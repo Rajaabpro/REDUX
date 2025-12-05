@@ -1,5 +1,6 @@
 import './App.css'
 import Todo from './components/todo';
+import AddForm from './components/AddForm';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 function App () {
@@ -7,6 +8,7 @@ function App () {
         <>
             <Provider store={store}>
                 <Todo />
+                <AddForm />
             </Provider>
         </>
     )
