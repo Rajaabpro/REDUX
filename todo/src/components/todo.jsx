@@ -6,7 +6,10 @@ export default function Todo() {
         <h3>Todos List</h3>
         <ul>
             {todos.map((todo) => (
-                <li key={todo.id}>{todo.text}</li>
+                <li key={todo.id}>{todo.text}
+                <button>Delete</button>
+                </li>
+                
             ))}
         </ul>
       </>
