@@ -7,7 +7,7 @@ export default function Todo() {
         <ul>
             {todos.map((todo) => (
                 <li key={todo.id}>{todo.text}
-                <button>Delete</button>
+                <button>Delete Task</button>
                 </li>
                 
             ))}
