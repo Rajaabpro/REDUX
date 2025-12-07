@@ -1,8 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteTodo } from '../features/todo/todoSlice';
 export default function Todo() {
     const todos = useSelector((state) => state.todo.todos);
+    const dispatch = useDispatch();
     const clickHandler = (id) => {
         console.log(id);
+        dispatch(deleteTodo(id));
     }
     return (
       <>
